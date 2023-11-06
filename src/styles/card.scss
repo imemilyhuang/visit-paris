@@ -1,0 +1,50 @@
+@import 'index';
+
+figure {
+    display: grid;
+    overflow: hidden;
+    cursor: pointer;
+}
+figure > * {
+    grid-area: 1/1;
+    transition: .4s;
+}
+figcaption {
+    width: 300px;
+}
+
+figure figcaption {
+    z-index: -1;
+    display: grid;
+    align-items: end;
+    color: $white;
+    background: var(--c,#0009);
+    clip-path: inset(0 var(--_i,100%) 0 0);
+    color: $white;
+}
+
+figure:hover figcaption{
+    --_i: 0%;
+}
+figure:hover img {
+    opacity: 0.5;
+}
+@supports not (-webkit-mask-clip: text) {
+    figure figcaption {
+        mask: none;
+        -webkit-mask: none;
+        color: $white;
+    }
+}
+figure > img {
+    z-index: -1;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+.img-link {
+    text-decoration: none;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}

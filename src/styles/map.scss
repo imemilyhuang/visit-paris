@@ -1,0 +1,22 @@
+@import 'index';
+
+.map-shape { 
+	fill: $colorDarkMid;
+	fill-opacity: 1;
+	stroke: $white;
+	stroke-opacity: 1;
+	stroke-width: 4px;
+	cursor: pointer;
+	&:hover {
+		fill: $colorDarkDark;
+	}
+}
+
+.map-content-container {
+	width: 600px;
+	background-color: $colorDarkLight;
+	padding: $largePadding;
+	padding-top: $xLargePadding;
+	padding-bottom: $xLargePadding;
+	margin-right: $xLargePadding;
+}

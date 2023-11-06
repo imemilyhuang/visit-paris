@@ -1,0 +1,148 @@
+$extraBold: 800;
+$bold: 700;
+$semiBold: 600;
+$lightBold: 500;
+$regular: 400;
+$light: 200;
+
+$colorDarkMono: #242124;
+$colorDarkDark: #573C27;
+$colorDarkMid: #A98360;
+$colorDarkLight: #F1DAC2;
+$white: #FFFAF3;
+
+$defaultPadding: 15px;
+$largePadding: 40px;
+$xLargePadding: 60px;
+$xxLargePadding: 80px;
+
+body {
+  background-color: $white;
+  margin: 0;
+  color: $colorDarkMono;
+  font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: $bold;
+  font-size: 64px;
+}
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: $bold;
+  font-size: 32px;
+}
+h3 {
+  font-weight: $bold;
+  font-size: 28px;
+}
+h4 {
+  font-weight: $semiBold;
+  font-size: 24px;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: $regular;
+  font-style: italic;
+}
+
+p {
+  font-size: 14px;
+  font-weight: $regular;
+}
+
+.cover-image {
+  width: 100vw;
+  height: 65vh;
+  object-fit: cover;
+}
+.cover-image2 {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0.5;
+  z-index: -2;
+}
+
+.big-component-wrapper {
+  min-height: calc(100vh);
+}
+
+.cover-title {
+  text-align: center;
+  margin-top: $xxLargePadding;
+  margin-bottom: $xLargePadding;
+}
+
+li {
+  font-size: 14px;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.full-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 68rem;
+  margin-bottom: $xxLargePadding;
+}
+.full-container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 68rem;
+  margin-bottom: 40px;
+}
+.full-container-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 68rem;
+  margin-bottom: $xxLargePadding;
+}
+
+.half-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(68rem / 2 - $largePadding*2);
+  margin-left: $largePadding;
+  margin-right: $largePadding;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 3rem;
+}
+
+.nav-link-button {
+  padding: $defaultPadding;
+  background-color: $colorDarkDark;
+  color: $white;
+  text-decoration: none;
+  margin-top: $defaultPadding;
+  width: fit-content;
+  &:hover {
+    background-color: $colorDarkMono;
+  }
+}
