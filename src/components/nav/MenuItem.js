@@ -1,6 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate, useNavigation } from "react-router-dom";
 import "../../styles/nav.scss"
 
 const variants = {
@@ -23,21 +23,31 @@ const variants = {
 };
 
 
-const MenuItem = ({ destination, name, big=true }) => {
+const MenuItem = ({ toggle=null, destination, name, big=true }) => {
+  const navigate = useNavigate()
+  const location = useLocation();
+  const handleClick = () => {
+    if (location.pathname===destination && toggle) {
+      toggle()
+    } else {
+      navigate(destination) 
+    }
+  }
+
   return (
-    <motion.li
+    <motion.div
       variants={variants}
       whileTap={{ scale: 0.95 }}
       className="nav-item"
     >
-      <Link className="nav-link" to={destination}>
+      <div onClick={handleClick} className="nav-link">
         {
           name==="Home" ?
           <h2>VISIT PARIS</h2> :
           <p style={big ? {fontSize: "20px"} : {fontSize: "14px"}}>{name}</p>
         }
-      </Link>
-    </motion.li>
+      </div>
+    </motion.div>
   );
 };
 

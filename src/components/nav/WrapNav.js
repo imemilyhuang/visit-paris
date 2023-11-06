@@ -14,18 +14,11 @@ const WrapNav = ({component}) => {
     const {width} = useWindowDimensions()
 
     const sidebar = {
-        open: { x: 0, transition: { type: "circIn", duration: 0.5, },},
-        closed: { x: width, transition: { type: "circInOut", duration: 0.5, delay: 0.65, }, }
+        open: { x: 0, transition: { type: "circIn", duration: 0.5, }, opacity: 1},
+        closed: { x: width, transition: { type: "circInOut", duration: 0.5, delay: 0.65}, opacity: 0, zIndex: -1}
     }
 
     const scrollY = useScrollPosition()
-
-    const routeInfo = [{name: "Experience Paris", destination: "/activities"},
-        {name: "See Paris", destination: "/attractions"},
-        {name: "Taste Paris", destination: "/dining"},
-        {name: "Stay in Paris", destination: "/accomodations"},
-        {name: "Travel in Paris", destination: "/transportation"},
-        {name: "About", destination: "/about"}]
 
     return <motion.div
         initial={{opacity: 0}}
@@ -39,7 +32,7 @@ const WrapNav = ({component}) => {
                 animate={isOpen ? "open" : "closed"}
             >
                 <motion.div className="nav-background" variants={sidebar}>
-                    <Nav />
+                    <Nav toggle={() => toggleOpen()} />
                 </motion.div>
 
                 <Toggle toggle={() => toggleOpen()} />
@@ -48,13 +41,11 @@ const WrapNav = ({component}) => {
                 <h2 className='logo-text nav-link'>VISIT PARIS</h2>
             </Link>
         </div>
-
-        <div className='big-component-wrapper'>
+        
         {component}
-        </div>
 
-        <div style={{backgroundColor: colors.colorDarkLight, display: "flex", flexDirection: "column", marginTop: "auto", padding: "40px", height: "150px"}}>
-            <Nav horizontal={true} />
+        <div className='footer-container'>
+            <Nav toggle={() => toggleOpen()} horizontal={true} />
             <p style={{color: colors.colorDarkMid, marginTop: "20px", textAlign: "center"}}>Copyright © 2023 Visit Paris.</p>
         </div>
     </motion.div>

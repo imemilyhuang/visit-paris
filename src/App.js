@@ -8,8 +8,6 @@ import Activities from "./routes/Activities";
 import Attractions from "./routes/Attractions";
 import Dining from "./routes/Dining";
 import Transportation from "./routes/Transportation";
-import Islands from "./routes/Islands";
-import Defense from "./routes/Defense";
 import AttractionsComponent from "./routes/AttractionsComponent";
 
 function App() {
@@ -45,14 +43,6 @@ function App() {
     // {
     //   path:"/transportation",
     //   element: <WrapNav component={<Transportation />} />
-    // },
-    // {
-    //   path:"/islands",
-    //   element: <WrapNav component={<Islands />} />
-    // },
-    // {
-    //   path:"/defense",
-    //   element: <WrapNav component={<Defense />} />
     // },
   ])
 

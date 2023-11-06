@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import attractionData from '../components/attractions/data';
-import colors from '../styles/colors';
 
 const getInfo = (imageId) => {
   for (let i = 0; i < attractionData.length; i++) {
@@ -20,27 +19,27 @@ const AttractionsComponent = () => {
   const info = getInfo(id)
 
   return (
-    <div style={{display: "flex", flexDirection: "column", justifyContent: "center", height: "100vh"}}>
+    <div className='attraction-component-container'>
       <img
-        className='cover-image2'
+        className='attraction-component-image-background-image'
         src={`/assets/attractions${info.image}.jpg`}
         alt={info.name}
       />
-      <div style={{padding: "6rem"}}>
+      <div className='attraction-overlay-container'>
         <img
-          style={{width: "100%", height: "400px", objectFit: 'cover',marginBottom: "-5px"}}
+          className='attraction-component-image'
           src={`/assets/attractions${info.image}.jpg`}
           alt={info.name}
         />
-        <div style={{display: "flex", flexDirection: "row"}}>
-          <div style={{width: "40%", padding: "3rem", backgroundColor: colors.colorDarkMono, color: colors.white, display: "flex", flexDirection: "column", justifyContent: "center"}}>
+        <div className='attraction-component-info-container'>
+          <div className='attraction-component-part1'>
             <h2>{info.name}</h2>
             <p className='subtitle' style={{marginBottom: "10px"}}>{info.subtitle}</p>
             {info.address && <p style={{marginBottom: "10px"}}>Address: {info.address}</p>}
-            {info.district && <p style={{marginBottom: "10px"}}>Arrondissement: {info.district.replaceAll('island', 'islands of Paris')}</p>}
+            {info.district && <p style={{marginBottom: "10px"}}>Arrondissement: {String(info.district).replaceAll('island', 'islands of Paris')}</p>}
             {info['suggested-duration'] && <p>Suggested Duration: {info['suggested-duration']} hours</p>}
           </div>
-          <div style={{width: "60%", padding: "3rem",backgroundColor: colors.white}}>
+          <div className='attraction-component-part2'>
             <p style={{marginBottom: "30px"}}>{info.desc}</p>
             <p style={{fontWeight: "500"}}>Did you know?</p>
             <p>{info['fun-fact']}</p>

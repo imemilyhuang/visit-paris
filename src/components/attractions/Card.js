@@ -11,23 +11,27 @@ const Card = ({info, hasLink=true}) => {
           <img src={`/assets/attractions${info.image}.jpg`} alt={info.name}/>
           <figcaption>
             <div style={{padding: "20px"}}>
-            <h2>{info.name.toUpperCase()}</h2>
-            <h4 style={{marginTop: "10px"}} className='subtitle'>{info.subtitle}</h4>
+            <h2 className='smaller' style={{marginBottom: "5px"}}>{info.name.toUpperCase()}</h2>
+            <p>{info.subtitle}</p>
+            <p className='nav-link-button-light'>LEARN MORE</p>
             </div>
           </figcaption>
         </figure>
       </NavLink> :
-      <NavLink to={""} className="img-link">
+      <div className="img-link">
+      <a href={info.link} target="_blank" rel="noopener noreferrer" style={{textDecoration: "none"}}>
         <figure>
           <img src={`${info.image}`} alt={info.name}/>
           <figcaption>
             <div style={{padding: "20px"}}>
-            <h2>{info.name.toUpperCase()}</h2>
+            <h2 className='smaller' style={{marginBottom: "5px"}}>{info.name.toUpperCase()}</h2>
             <p>{info.subtitle}</p>
+            <p className='nav-link-button-light'>BOOK</p>
             </div>
           </figcaption>
         </figure>
-      </NavLink>
+        </a>
+      </div>
     }
   </>
   )

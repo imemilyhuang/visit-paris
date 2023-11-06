@@ -28,64 +28,139 @@ body {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 h1 {
   font-family: 'Playfair Display', serif;
   font-weight: $bold;
-  font-size: 64px;
+  font-size: 4rem;
+  @media only screen and (max-width: 800px) {
+    font-size: 3rem;
+  }
+  @media only screen and (max-width: 400px) {
+    font-size: 2.75rem;
+  }
 }
 h2 {
   font-family: 'Playfair Display', serif;
   font-weight: $bold;
-  font-size: 32px;
+  font-size: 2.25rem;
+  @media only screen and (max-width: 800px) {
+    font-size: 2rem;
+  }
+  @media only screen and (max-width: 400px) {
+    font-size: 1.5rem;
+  }
 }
-h3 {
+h2.smaller {
+  font-family: 'Playfair Display', serif;
   font-weight: $bold;
-  font-size: 28px;
+  font-size: 1.85rem;
+  @media only screen and (max-width: 800px) {
+    font-size: 1.65rem;
+  }
+  @media only screen and (max-width: 400px) {
+    font-size: 1.5rem;
+  }
+}
+.semiBold {
+  font-weight: $semiBold;
 }
 h4 {
+  font-family: 'Playfair Display', serif;
   font-weight: $semiBold;
-  font-size: 24px;
+  font-size: 1.4rem;
+  @media only screen and (max-width: 800px) {
+    font-size: 1.2rem;
+  }
+  @media only screen and (max-width: 400px) {
+    font-size: 0.9rem;
+  }
+}
+
+h2.evenSmaller {
+  font-family: 'Playfair Display', serif;
+  font-weight: $bold;
+  font-size: 1.125rem;
+  @media only screen and (max-width: 800px) {
+    font-size: 1rem;
+  }
+  @media only screen and (max-width: 400px) {
+    font-size: 0.875rem;
+  }
 }
 
 .subtitle {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: $regular;
   font-style: italic;
+  @media only screen and (max-width: 800px) {
+    font-size: 1rem;
+  }
+  @media only screen and (max-width: 400px) {
+    font-size: 0.875rem;
+  }
+}
+
+li {
+  font-size: 0.875rem;
+  font-weight: $regular;
+  margin-left: 2rem;
+  @media only screen and (max-width: 800px) {
+    font-size: 0.75rem;
+  }
 }
 
 p {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: $regular;
+  @media only screen and (max-width: 800px) {
+    font-size: 0.75rem;
+  }
 }
 
 .cover-image {
-  width: 100vw;
+  width: 100%;
   height: 65vh;
   object-fit: cover;
-}
-.cover-image2 {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  position: absolute;
-  opacity: 0.5;
-  z-index: -2;
-}
-
-.big-component-wrapper {
-  min-height: calc(100vh);
 }
 
 .cover-title {
   text-align: center;
-  margin-top: $xxLargePadding;
-  margin-bottom: $xLargePadding;
+  margin: 3rem 0;
+  @media only screen and (max-width: 850px) {
+    margin: 2.5rem 0;
+  }
+  @media only screen and (max-width: 400px) {
+    margin: 1.75rem 0;
+  }
 }
 
-li {
-  font-size: 14px;
+.mbSmall {
+  margin-bottom: 0.75rem;
+  @media only screen and (max-width: 850px) {
+    margin-bottom: 0.5rem;
+  }
+}
+.mb {
+  margin-bottom: 2rem;
+  @media only screen and (max-width: 850px) {
+    margin-bottom: 1.75rem;
+  }
+  @media only screen and (max-width: 400px) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.mbLarge {
+  margin-bottom: 4.5rem;
+  @media only screen and (max-width: 850px) {
+    margin-bottom: 3.75rem;
+  }
+  @media only screen and (max-width: 400px) {
+    margin-bottom: 3rem;
+  }
 }
 
 .home-container {
@@ -102,40 +177,121 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60rem;
-  margin-bottom: $xxLargePadding;
+  padding: 0 6rem;
+  max-width: 66rem;
+  @media only screen and (max-width: 1000px) {
+    padding: 0 3rem;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 0 2rem;
+  }
 }
 .full-container2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60rem;
+  max-width: 66rem;
+  padding: 0 6rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  @media only screen and (max-width: 1000px) {
+    padding: 0 3rem;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 0 2rem;
+  }
 }
 .full-container-row {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  width: 60rem;
-  margin-bottom: $xxLargePadding;
+  justify-content: space-between;
+  padding: 0 6rem;
+  max-width: 66rem;
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column;
+    padding: 0 3rem;
+    align-items: center;
+  }
+  @media only screen and (max-width: 400px) {
+    flex-direction: column;
+    padding: 0 2rem;
+    align-items: center;
+  }
+}
+.full-container-row-item {
+  width: 30%;
+  @media only screen and (max-width: 1000px) {
+    width: 100%;
+    margin-top: 2rem;
+  }
 }
 
-.half-container {
-  display: flex;
-  flex-direction: column;
+.align-center {
   align-items: center;
-  width: calc(68rem / 2 - $largePadding*2);
-  margin-left: $largePadding;
-  margin-right: $largePadding;
 }
 
 .grid-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 3rem;
+  max-width: 66rem;
+  place-items: center;
+  @media only screen and (max-width: 1150px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media only screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+}
+.activity-image-holder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 66rem;
+  place-items: center;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  @media only screen and (max-width: 1200px) {
+    grid-template-columns: 1fr;
+  }
+}
+.grid-item-mid1 {
+  width: 35%;
+  @media only screen and (max-width: 1000px) {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+.grid-item-mid2 {
+  width: 47.5%;
+  @media only screen and (max-width: 1000px) {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+.grid-item-mid3 {
+  width: 60%;
+  @media only screen and (max-width: 1000px) {
+    width: 100%;
+    margin-top: 1rem;
+  }
 }
 
+.align-center {
+  align-items: center;
+}
+
+.nav-link-button-light {
+  padding: $defaultPadding;
+  background-color: $colorDarkLight;
+  color: $colorDarkMono;
+  text-decoration: none;
+  margin-top: 30px;
+  width: fit-content;
+  &:hover {
+    background-color: $colorDarkMono;
+  }
+  z-index: 100;
+}
 .nav-link-button {
   padding: $defaultPadding;
   background-color: $colorDarkDark;
@@ -146,4 +302,117 @@ li {
   &:hover {
     background-color: $colorDarkMono;
   }
+}
+
+// home page styles
+.text-center-home {
+  text-align: center;
+  @media only screen and (max-width: 1000px) {
+    text-align: start;
+  }
+}
+
+
+// attraction component styles
+.attraction-component-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  min-height: 100vh;
+  @media only screen and (max-height: 800px) and (max-width: 850px) {
+    height: 100%;
+  }
+  @media only screen and (max-width: 900px) {
+    height: 100%;
+  }
+}
+.attraction-component-image {
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+  margin-bottom: -5px;
+
+  @media only screen and (max-height: 950px) {
+    height: 20rem;
+  }
+  @media only screen and (max-width: 800px) {
+    height: 20rem;
+  }
+}
+.attraction-component-image-background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0.4;
+  z-index: -2;
+}
+.attraction-component-info-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  @media only screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+}
+.attraction-component-part1 {
+  width: 40%;
+  padding: 3rem;
+  background-color: $colorDarkMono;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media only screen and (max-width: 800px) {
+    padding: 2rem;
+    width: 100%;
+  }
+}
+.attraction-component-part2 {
+  width: 60%;
+  padding: 3rem;
+  background-color: $white;
+  color: $colorDarkMono;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media only screen and (max-width: 800px) {
+    padding: 2rem;
+    width: 100%;
+  }
+}
+.attraction-overlay-container {
+  padding: 6rem;
+  max-width: 88rem;
+  @media only screen and (max-width: 800px) {
+    padding: 4rem;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 4rem 2rem;
+  }
+}
+
+.activity-card-image {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.footer-container {
+  background-color: $colorDarkLight;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  align-items: center;
+  @media only screen and (max-width: 400px) {
+    padding: 2rem;
+    align-items: start;
+  }
+}
+
+.align-left {
+  align-items: start;
 }

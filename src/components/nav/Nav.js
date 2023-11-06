@@ -12,7 +12,7 @@ const variants = {
   }
 };
 
-const Nav = ({horizontal=false}) => {
+const Nav = ({horizontal=false, toggle}) => {
   const routeInfo = [
     {name: "Attractions", destination: "/attractions"},
     {name: "Activities", destination: "/activities"},
@@ -22,8 +22,12 @@ const Nav = ({horizontal=false}) => {
   ]
 
   return (
-    <motion.ul variants={variants} className='nav-ul'>
-      <MenuItem destination={"/"} name={"Home"} />
+    <motion.ul variants={variants} className={horizontal ? 'nav-ul2': 'nav-ul'}>
+      {
+        horizontal ?
+        <MenuItem destination={"/"} name={"Home"} />:
+        <MenuItem toggle={toggle} destination={"/"} name={"Home"} />
+      }
       {
         horizontal ?
         <div style={{height: "10px"}} />:
@@ -34,15 +38,15 @@ const Nav = ({horizontal=false}) => {
         horizontal ?
         <div style={{display: "flex", flexDirection: 'row', flexWrap: 'wrap'}}>
           {routeInfo.map(val => {
-            return <>
-            <MenuItem big={false} destination={val.destination} name={val.name} key={val.name} />
-            <div style={{width: "20px"}} />
-            </>
+            return <div style={{display: "flex", flexDirection: "row"}} key={val.name}>
+              <MenuItem big={false} destination={val.destination} name={val.name} />
+              <div style={{width: "20px"}} />
+            </div>
           }
           )}
         </div> :
         routeInfo.map(val => (
-          <MenuItem destination={val.destination} name={val.name} key={val.name} />
+          <MenuItem toggle={toggle} destination={val.destination} name={val.name} key={val.name} />
         ))
       }
     </motion.ul>
