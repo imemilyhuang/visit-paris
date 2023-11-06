@@ -100,39 +100,39 @@ const Accommodations = () => {
       </div>
 
       <div className='full-container mbSmall'>
-        <h4 className='mbSmall' style={{width: "100%"}}>The 1st: Best Neighborhood In Paris For Sightseeing</h4>
+        <h4 className='mbSmall' style={{width: "100%"}}>The 1st: Best Neighborhood in Paris for Sightseeing</h4>
         <p className='mbSmall'>
           If you plan to do a lot of sightseeing, stay in the 1st Arrondissement. Indeed, many of Paris’s most famous landmarks are in this district, and you’ll be well-positioned to see many others. Art lovers will enjoy staying in this district near the Louvre Museum, the Musée des Arts Décoratifs, and the Impressionist treasures at the Musée de l’Orangerie. Admire the beautifully stained glasswork of Sainte-Chapelle, stroll through the Tuileries Garden, and enjoy a glass of wine at one of the quaint cafes lining the garden of the Palais Royale. Also, shoppers will delight in discovering the elegant shops along the Rue de Rivoli and the trendy boutiques in the lively Les Halles quarter.
         </p>
         <p className='mbSmall'>
           The Place Vendome, the beautiful plaza where Coco Chanel used to live, is also home to the newly renovated Ritz Paris, where you can have a drink at the Hemingway Bar. You’re also within easy walking distance of Notre Dame Cathedral, the Centre Pompidou, Champs-Elysées, and just across the river from the Musée D’Orsay and Saint-Germain-des-Prés. This is one of the most expensive areas to stay in while in Paris but I highly recommend it if you come to spend a few days and want to be close to all the tourist monuments.
         </p>
-        <p className='mbSmall' style={{width: "100%"}}>Where To Stay In The 1st Arrondissement</p>
+        <p className='mbSmall semiBold' style={{width: "100%"}}>Where to Stay in the 1st Arrondissement</p>
       </div>
       <div className='grid-wrapper mb'>
         {renderInfo1}
       </div>
 
       <div className='full-container mbSmall align-left'>
-        <h4 className='mbSmall'>The 7th: Best Neighborhood In Paris To Stay For First Timer</h4>
+        <h4 className='mbSmall'>The 7th: Best Neighborhood in Paris to Stay for the First Timer</h4>
         <p className='mbSmall'>
           The 7th is the perfect place to stay for first-time visitors to Paris! Indeed, in this district, you’re a stone’s throw away from many of the city’s landmarks, including the Eiffel Tower, Parc du Champ de Mars, the Invalides, Musée Rodin, the incomparable Musée d’Orsay, and the cutting edge Musée du Quai Branly to name a few. With some of the most beautiful architecture in the city and the charming market street Rue Cler, you’ll experience what most people think of when they envision Paris. The 7th is considered one of the best walking neighborhoods.
         </p>
-        <p className='mbSmall semiBold'>Where To Stay In The 7th Arrondissement</p>
+        <p className='mbSmall semiBold'>Where to Stay in the 7th Arrondissement</p>
       </div>
       <div className='grid-wrapper mb'>
         {renderInfo7}
       </div>
 
       <div className='full-container mbSmall align-left'>
-        <h4 className='mbSmall'>The Marais (3rd and 4th): Best Neighborhoods In Paris For Shopping</h4>
+        <h4 className='mbSmall'>The Marais (3rd and 4th): Best Neighborhoods in Paris for Shopping</h4>
         <p className='mbSmall'>
           The Marais neighborhood dates from the 17th century when noblemen began building large mansions here. Once the haunt of the old nobility, the Marais neighborhood in Paris’ 3rd and 4th Arrondissements is a popular and thriving community known for its trendy boutiques, restaurants, and wonderful museums. From chic boutiques filled with local Parisian designers, French chains like Sandro or IRO — check the best affordable French fashion brands to shop for — international brands, or more upscale shopping, Le Marais caters to both men and women at almost every price point. And if most tourists head to the Galeries Lafayette, stylish Parisians prefer to shop at BHV (short for Bazar de l’Hôtel de Ville).
         </p>
         <p className='mbSmall'>
           Be sure to visit the Musée Carnavalet, dedicated to the history of Paris. Le Marais is also home to the Musée Picasso, containing an unparalleled collection of works by this famous modern artist. Don’t forget to visit the tiny Île de la Cité and Île Saint-Louis where the history of Paris begins. Plus, don’t miss the peaceful Place Dauphine on the Île de la Cité with its lovely cafés and restaurants.
         </p>
-        <p className='mbSmall'>Where To Stay In The 3rd And 4th Arrondissements</p>
+        <p className='mbSmall semiBold'>Where to Stay in the 3rd and 4th Arrondissements</p>
       </div>
       <div className='grid-wrapper mb'>
         {renderInfo34}
@@ -146,20 +146,20 @@ const Accommodations = () => {
         <p className='mbSmall'>
           At the eastern end of the 2nd Arrondissement, you can explore the Sentier neighborhood, still filled with wholesale textile stores and garment manufacturers although they are now losing ground to hip bistros, bars, and upscale hotels. Sentier is definitely one of the best neighborhoods to experience Paris like a local Parisian.
         </p>
-        <p className='mbSmall'>Where To Stay In The 2nd Arrondissement</p>
+        <p className='mbSmall semiBold'>Where to Stay in the 2nd Arrondissement</p>
       </div>
       <div className='grid-wrapper mb'>
         {renderInfo2}
       </div>
       <div className='full-container mbSmall align-left'>
-        <h4 className='mbSmall'>The 5th And 6th: Best Neighborhoods In Paris For Families</h4>
+        <h4 className='mbSmall'>The 5th and 6th: Best Neighborhoods in Paris for Families</h4>
         <p className='mbSmall'>
           The 6th Arrondissement is located on the Left Bank (“Rive Gauche”) and is home to the atmospheric Saint-Germain-des-Prés quarter, the Latin Quarter, and the Luxembourg Gardens. The 5th and 6th are highly central with great playgrounds and easily walkable with access to shops, sites, and restaurants. Family-friendly highlights include the National Museum of Natural History and the botanical garden known as Jardin des Plantes.
         </p>
         <p className='mbSmall'>
           The 5th is very central — maybe not as connected by metro — and offers a quieter, village-like feel. The 6th is more artistic and filled with art galleries and antique shops, as well as some of the city’s best small art museums. It’s also where you’ll find the impressive Musée de Cluny and two of Paris’ most famous cafés, Café de Flore and Les Deux Magots.
         </p>
-        <p className='mbSmall'>Where To Stay In The 5th And 6th Arrondissements</p>
+        <p className='mbSmall semiBold'>Where to Stay in the 5th and 6th Arrondissements</p>
       </div>
 
       <div className='grid-wrapper mb'>
@@ -167,14 +167,14 @@ const Accommodations = () => {
       </div>
 
       <div className='full-container mbSmall align-left'>
-        <h4 className='mbSmall'>The 9th And 18th: Most Romantic Neighborhoods In Paris</h4>
+        <h4 className='mbSmall'>The 9th and 18th: Most Romantic Neighborhoods in Paris</h4>
         <p className='mbSmall'>
-        Lovers of French movie Amélie will adore Montmartre, Paris’s pretty 18th Arrondissement, home to many of the cult film’s quirky brasseries, parks, and cobbled streets (including Café des Deux Moulins at 15 rue Lepic). In the 19th century, Montmartre was a haunt for artists and bohemians including Monet, Renoir, Picasso, Van Gogh, and Toulouse-Lautrec. This neighborhood offers breathtaking views while retaining a quaint, village-like charm. And it’s the perfect place for a honeymoon visit or romantic outing. Don’t miss the Sacré Coeur, and enjoy one of the best views of Paris.
+        Lovers of French movie Amélie will adore Montmartre, Paris’s pretty 18th Arrondissement, home to many of the cult film’s quirky brasseries, parks, and cobbled streets (including Café des Deux Moulins at 15 rue Lepic). In the 19th century, Montmartre was a haunt for artists and bohemians including Monet, Renoir, Picasso, Van Gogh, and Toulouse-Lautrec. This neighborhood offers breathtaking views while retaining a quaint, village-like charm. and it’s the perfect place for a honeymoon visit or romantic outing. Don’t miss the Sacré Coeur, and enjoy one of the best views of Paris.
         </p>
         <p className='mbSmall'>
         The 18th is bordered by the more central 9th Arrondissement, which is home to the historic Palais Garnier opera house, museums, and theaters. Also, the former red-light district Pigalle has reinvented itself, with trendy SoPi (South Pigalle) a great neighborhood for foodies. Don’t forget to wander in the street Rue Notre Dame de Lorette and to visit the Musée de la Vie Romantique.
         </p>
-        <p className='mbSmall'>Where To Stay In The 9th And 18th Arrondissements</p>
+        <p className='mbSmall semiBold'>Where to Stay in the 9th and 18th Arrondissements</p>
       </div>
 
       <div className='grid-wrapper mb'>
@@ -188,7 +188,7 @@ const Accommodations = () => {
         </p>
       </div>
       <div className='full-container mbLarge align-left'>
-        <h4 className='mbSmall'>Areas To Avoid In Paris</h4>
+        <h4 className='mbSmall'>Areas to Avoid in Paris</h4>
         <p className='mbSmall'>Paris is generally a safe city. However, there are a few places I’ll recommend avoiding in Paris when you visit:</p>
         <ul>
           <li>The Gare du Nord / Gare de l’Est area at night.</li>
