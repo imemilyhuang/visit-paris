@@ -102,21 +102,22 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 68rem;
+  width: 60rem;
   margin-bottom: $xxLargePadding;
 }
 .full-container2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 68rem;
-  margin-bottom: 40px;
+  width: 60rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .full-container-row {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  width: 68rem;
+  width: 60rem;
   margin-bottom: $xxLargePadding;
 }
 

@@ -55,7 +55,7 @@ const WrapNav = ({component}) => {
 
         <div style={{backgroundColor: colors.colorDarkLight, display: "flex", flexDirection: "column", marginTop: "auto", padding: "40px", height: "150px"}}>
             <Nav horizontal={true} />
-            <p style={{color: "#808080", marginTop: "20px", textAlign: "center"}}>Copyright © 2023 Visit Paris.</p>
+            <p style={{color: colors.colorDarkMid, marginTop: "20px", textAlign: "center"}}>Copyright © 2023 Visit Paris.</p>
         </div>
     </motion.div>
 }

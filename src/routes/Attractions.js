@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Map from '../components/map/Map'
 import attractionData from '../components/attractions/data'
 import Card from '../components/attractions/Card'
 
 const Attractions = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   const renderAttracts = attractionData.map(val =>
     <Card key={val.name} info={val} />  
   )
