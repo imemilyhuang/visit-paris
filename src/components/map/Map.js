@@ -13,7 +13,7 @@ const Map = () => {
 
   return (
     <div className='map-container-row' style={{justifyContent: "center", alignItems: "center"}}>
-      <svg height={(svgWidth*400)/700} width={svgWidth} viewBox={`400 0 700 880`} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" xmlSpace="preserve">
+      <svg onMouseLeave={() => setFocused('none')} height={(svgWidth*400)/700} width={svgWidth} viewBox={`400 0 700 880`} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" xmlSpace="preserve">
         <path className='map-shape' id="arrondissement01" onMouseOver={() => setFocused("arrondissement01")} d="M619.6,311.4l-3.9,1l0.8,3.9l-9.9,21.9l-1.2,2.2l-1.5,1.3l-14.2,27.9  l62.1,30.7l9.6,3l0,0.1l12.6,4.2l14.8,3.9l19.3,16.8l11.8,14.8l10.3,7.7v0l0.1,0l8.5-12.4l6.6-15.5l2.4-0.5l15.8-42.9l4.9-13.4  l-11.3-3.7l-82.5-29.6l-8.9-3.2l-17.7-6.1l-3.2-2L632.4,308L619.6,311.4L619.6,311.4z"/>
         <path className='map-shape' id="arrondissement02" onMouseOver={() => setFocused("arrondissement02")} d="M632.4,308l12.4,13.6l3.2,2l17.7,6.1l8.9,3.2l82.5,29.6l11.3,3.7  l19.7-52.8l-38-11.9l-46.9-11.8L632.4,308L632.4,308z"/>
         <path className='map-shape' id="arrondissement03" onMouseOver={() => setFocused("arrondissement03")} d="M768.4,366.2l-4.9,13.4l19.5,6.6l20.5,10.3l11.3,12.8l11.4,8.4l6.2,4  l10.1,4.9l5,2.5l12.3,3.2l12.8,3.2l-10.4-66.2l-14.5-36.3l-3.2-3l-3.4-3l-41.2-9.4l-11.9-4L768.4,366.2L768.4,366.2z"/>

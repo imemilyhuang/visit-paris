@@ -1,6 +1,6 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import Nav from './Nav'
-import { motion, useCycle, useMotionValueEvent, useScroll } from 'framer-motion'
+import { motion, useCycle } from 'framer-motion'
 import Toggle from './Toggle'
 import "../../styles/nav.scss" 
 import useWindowDimensions from '../../hooks/useWindowDimensions';

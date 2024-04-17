@@ -25,7 +25,7 @@ const Home = () => {
                 <div className='full-container-row-item'>
                     <h2 className='mbSmall'>SEE.</h2>
                     <img 
-                        src='/assets/covers/see-paris-home.png'
+                        src='/assets/covers/see-paris-home.png' alt="see paris"
                         style={{width: "100%", height: '200px', objectFit: "cover", marginBottom: "10px"}}
                     />
                     <p>From the Eiffel Tower's soaring elegance to the Mona Lisa's enigmatic smile, Paris dazzles at every turn. Savor exquisite cuisine, explore historic landmarks, and embrace the romance of Montmartre. With world-class art, captivating history, and endless charm, Paris promises a journey of a lifetime.</p>
@@ -36,7 +36,7 @@ const Home = () => {
                 <div className='full-container-row-item'>
                     <h2 className='mbSmall'>EXPERIENCE.</h2>
                     <img 
-                        src='/assets/covers/experience-paris-home.png'
+                        src='/assets/covers/experience-paris-home.png' alt="experiences"
                         style={{width: "100%", height: '200px', objectFit: "cover", marginBottom: "10px"}}
                     />
                     <p>Although Paris is home to some of the most well-known tourist attractions in the world—from the Eiffel Tower to the Palace of Versailles—the city also brims with a variety of hidden gems and local favorites. If you want to gain a new, authentic perspective and experience the city like a true Parisian, here are the top 10 non-touristy things you can do while you’re here.</p>
@@ -47,7 +47,7 @@ const Home = () => {
                 <div className='full-container-row-item'>
                     <h2 className='mbSmall'>STAY.</h2>
                     <img 
-                        src='/assets/covers/accomodations.png'
+                        src='/assets/covers/accomodations.png' alt="accomodations"
                         style={{width: "100%", height: '200px', objectFit: "cover", marginBottom: "10px"}}
                     />
                     <p>Finding where to stay in Paris can be confusing and stressful, especially if this is your first visit. But first, you need to understand the Paris neighborhoods and how they are set up. This will help you understand my guide and where each location is in a bit more detail when I’m showing you the best places to stay in Paris.</p>

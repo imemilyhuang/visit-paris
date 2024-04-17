@@ -36,6 +36,7 @@ const Activities = () => {
         className='cover-image'
         style={{objectPosition: "center bottom"}}
         src='/assets/covers/activities.png'
+        alt="experence paris cover"
       />
       <h1 className='text-center cover-title'>EXPERIENCE PARIS</h1>
 
@@ -51,7 +52,7 @@ const Activities = () => {
       </div>
 
       <div className='full-container-row mbLarge align-center'>
-        <img src='/assets/paris-alal/paris-coffee.jpg' className='grid-item-mid2' style={{height: "250px", objectFit: "cover", objectPosition: "center bottom"}} />
+        <img alt="coffee shop" src='/assets/paris-alal/paris-coffee.jpg' className='grid-item-mid2' style={{height: "250px", objectFit: "cover", objectPosition: "center bottom"}} />
         <div className='grid-item-mid2'>
           <h4 className='mbSmall'>Take the Time to Enjoy Your Coffee</h4>
           <p>
@@ -72,7 +73,7 @@ const Activities = () => {
       </div>
 
       <div className='full-container-row mbLarge align-center'>
-        <img src='/assets/paris-alal/open-air-market.jpg' className='grid-item-mid1' style={{height: "300px", objectFit: "cover"}} />
+        <img alt="open air market" src='/assets/paris-alal/open-air-market.jpg' className='grid-item-mid1' style={{height: "300px", objectFit: "cover"}} />
         <div className='grid-item-mid3'>
           <h4 className='mbSmall'>Stroll the Markets</h4>
           <p>
@@ -110,7 +111,7 @@ const Activities = () => {
             In the summer months, most Parisians enjoy a picnic along the banks of the Seine. So if you want to experience Paris like a local, head to a local supermarket, pick up some Parisian picnic essentials (French cheese and charcuterie, wine, baguettes), and search for a picnic spot along the Seine. One of my favorite spots is the Place Louis Aragon on the Île Saint-Louis.
           </p>
         </div>
-        <img className='grid-item-mid2 mbSmall' src='/assets/paris-alal/seine-picnic.jpg' style={{height: "300px", objectFit: "cover"}} />
+        <img alt="seince picnic" className='grid-item-mid2 mbSmall' src='/assets/paris-alal/seine-picnic.jpg' style={{height: "300px", objectFit: "cover"}} />
       </div>
 
       <div className='full-container mbLarge text-center-home'>
@@ -121,7 +122,7 @@ const Activities = () => {
       </div>
 
       <div className='full-container mbLarge'>
-        <img className='mbSmall' src='/assets/paris-alal/concept-store-empreintes.jpg' style={{width: "100%", height: "300px", objectFit: "cover"}} />
+        <img alt="concept store empreintes" className='mb' src='/assets/paris-alal/concept-store-empreintes.jpg' style={{width: "100%", height: "300px", objectFit: "cover"}} />
         <h4 className='mbSmall' style={{width: "100%"}}>Go Shopping in Paris’s Many Concept Stores</h4>
         <p className='mbSmall'>
         Ever since Colette closed down, concept stores have been popping up all over the city to no end. Here are a few of my favorite ones:
@@ -149,7 +150,7 @@ const Activities = () => {
       </div>
 
       <div className='full-container-row mbLarge align-center'>
-        <img className='grid-item-mid1' src='/assets/paris-alal/passage-verdeau.jpg' style={{height: "300px", objectFit: "cover", objectPosition: "center bottom"}} />
+        <img alt="passage verdeau" className='grid-item-mid1' src='/assets/paris-alal/passage-verdeau.jpg' style={{height: "300px", objectFit: "cover", objectPosition: "center bottom"}} />
         <div className='grid-item-mid3'>
           <h4 className='mbSmall'>Wander Through Beautiful Covered Galleries</h4>
           <p className='mbSmall'>

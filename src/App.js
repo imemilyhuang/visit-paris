@@ -6,8 +6,6 @@ import WrapNav from "./components/nav/WrapNav";
 import Accommodations from "./routes/Accommodations";
 import Activities from "./routes/Activities";
 import Attractions from "./routes/Attractions";
-import Dining from "./routes/Dining";
-import Transportation from "./routes/Transportation";
 import AttractionsComponent from "./routes/AttractionsComponent";
 
 function App() {
