@@ -16,7 +16,7 @@ figcaption {
 figure figcaption {
     z-index: -1;
     display: grid;
-    align-items: end;
+    align-items: flex-end;
     color: $white;
     background: var(--c,#0009);
     clip-path: inset(0 var(--_i,100%) 0 0);
