@@ -7,7 +7,9 @@ import Activities from "./routes/Activities";
 import Attractions from "./routes/Attractions";
 import AttractionsComponent from "./routes/AttractionsComponent";
 
-import React, { cloneElement } from 'react'
+import React, { cloneElement, useState } from 'react'
+import LoadingScreen from "./components/nav/LoadingScreen";
+import PreloadedImages from "./components/nav/PreloadedImages";
 
 function App() {
   const element = useRoutes([
@@ -47,10 +49,21 @@ function App() {
 
   const location = useLocation();
 
+  const [loading, setLoading] = useState(true);
+  const [showContent, setShowContent] = useState(false)
+
   return (
+    <>
+    <PreloadedImages setLoading={setLoading} />
+
+    <AnimatePresence>
+    { !showContent && <LoadingScreen loading={loading} setShowContent={setShowContent} /> }
+    </AnimatePresence>
+
     <AnimatePresence mode="wait">
       {cloneElement(element, { key: location.pathname })}
     </AnimatePresence>
+    </>
   );
 }
 

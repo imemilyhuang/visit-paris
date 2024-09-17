@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import LoadingScreen from '../components/nav/LoadingScreen';
 
 const Home = () => {
-  const [imagesLoaded, setImagesLoaded] = useState(0);
-  const [showContent, setShowContent] = useState(false)
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -13,14 +10,11 @@ const Home = () => {
 
   return (
     <>
-    <AnimatePresence>
-    { !showContent && <LoadingScreen loading={imagesLoaded<1} setShowContent={setShowContent} /> }
-    </AnimatePresence>
-    <div className={`home-container ${!showContent && 'no-scroll'}`}>
+    <div className="home-container">
+    {/* <div className={`home-container ${showContent && 'no-scroll'}`}> */}
       <motion.img
         className='cover-image'
         src='/assets/covers/home.png'
-        onLoad={() => setImagesLoaded(p => p+1)}
       />
       <h1 className='cover-title full-container text-center'>WELCOME TO PARIS</h1>
 
