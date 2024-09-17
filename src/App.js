@@ -1,12 +1,13 @@
 import { useLocation, useRoutes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { cloneElement } from "react";
 import Home from "./routes/Home";
 import WrapNav from "./components/nav/WrapNav";
 import Accommodations from "./routes/Accommodations";
 import Activities from "./routes/Activities";
 import Attractions from "./routes/Attractions";
 import AttractionsComponent from "./routes/AttractionsComponent";
+
+import React, { cloneElement } from 'react'
 
 function App() {
   const element = useRoutes([

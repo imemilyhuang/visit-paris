@@ -429,6 +429,12 @@ p {
   z-index: 100;
 }
 
+.no-scroll {
+  filter: blur(3px);
+  overflow: hidden;
+  position: fixed;
+}
+
 button {
   background-color: transparent;
   border: none;

@@ -1,74 +1,26 @@
 import React, { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import AnimatedText from '../components/nav/AnimatedText'
-
-const LoadingScreen = ({loading, setShowContent}) => {
-  return (
-    <motion.div exit={{opacity: 0}} animate={{opacity: 1}} className='loading-screen' >
-      <AnimatedText el="h1" text={["VISIT PARIS"]} className="cover-title full-container text-center" />
-      <AnimatePresence>
-      {
-        loading ?
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-          <AnimatedText el="p" text={["Preparing your insider's guide..."]} className="cover-title full-container text-center" repeatDelay={5000} />
-        </motion.div>
-        :
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-          <button onClick={() => setShowContent(true)}>
-            <p className='nav-link-button'>ENTER NOW</p>
-          </button>
-        </motion.div>
-      }
-      </AnimatePresence>
-    </motion.div>
-  )
-}
+import LoadingScreen from '../components/nav/LoadingScreen';
 
 const Home = () => {
-  const [loading, setLoading] = useState(true);
+  const [imagesLoaded, setImagesLoaded] = useState(0);
   const [showContent, setShowContent] = useState(false)
-
-  useEffect(() => {
-    const images = [
-      '/assets/covers/home.png',
-      // ... add other images here
-    ];
-
-    const preloadImages = () => {
-      const promises = images.map((src) => {
-        return new Promise((resolve, reject) => {
-          const img = new Image();
-          img.src = src;
-          img.onload = resolve;
-          img.onerror = reject;
-        });
-      });
-
-      Promise.all(promises).then(() => {
-        setLoading(false);
-      });
-    };
-
-    preloadImages();
-  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
   return (
-    
-    <div className='home-container'>
-      <AnimatePresence>
-      { !showContent && <LoadingScreen loading={loading} setShowContent={setShowContent} /> }
-      </AnimatePresence>
-      <motion.img 
-        initial={{opacity: 0}}
-        exit={{opacity: 0}}
-        animate={{opacity: 1}}
+    <>
+    <AnimatePresence>
+    { !showContent && <LoadingScreen loading={imagesLoaded<1} setShowContent={setShowContent} /> }
+    </AnimatePresence>
+    <div className={`home-container ${showContent && 'no-scroll'}`}>
+      <motion.img
         className='cover-image'
         src='/assets/covers/home.png'
+        onLoad={() => setImagesLoaded(p => p+1)}
       />
       <h1 className='cover-title full-container text-center'>WELCOME TO PARIS</h1>
 
@@ -123,6 +75,7 @@ const Home = () => {
         </p>
       </div>
     </div>
+    </>
   )
 }
 

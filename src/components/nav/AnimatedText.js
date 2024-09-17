@@ -33,7 +33,7 @@ const AnimatedText = ({
     const show = () => {
       controls.start("visible");
       if (repeatDelay) {
-        timeout = setTimeout(async () => {
+        timeout = setInterval(async () => {
           await controls.start("hidden");
           controls.start("visible");
         }, repeatDelay);

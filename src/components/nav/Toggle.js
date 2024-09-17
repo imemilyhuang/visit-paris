@@ -4,10 +4,10 @@ import "../../styles/nav.scss"
 
 const Path = props => (
     <motion.path
-      fill="transparent"
-      strokeWidth="3"
-      stroke="#242124"
-      {...props}
+        fill="transparent"
+        strokeWidth="3"
+        stroke="#242124"
+        {...props}
     />
 );
 
