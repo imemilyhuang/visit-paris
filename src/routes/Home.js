@@ -16,7 +16,7 @@ const Home = () => {
     <AnimatePresence>
     { !showContent && <LoadingScreen loading={imagesLoaded<1} setShowContent={setShowContent} /> }
     </AnimatePresence>
-    <div className={`home-container ${showContent && 'no-scroll'}`}>
+    <div className={`home-container ${!showContent && 'no-scroll'}`}>
       <motion.img
         className='cover-image'
         src='/assets/covers/home.png'

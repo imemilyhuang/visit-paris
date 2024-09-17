@@ -14,7 +14,7 @@ const LoadingScreen = ({loading, setShowContent}) => {
       {
         !loading &&
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-          <button onClick={() => setShowContent(true)}>
+          <button onClick={() => setShowContent(prev => !prev)}>
             <p className='nav-link-button'>ENTER NOW</p>
           </button>
         </motion.div>
